@@ -1,0 +1,49 @@
+#translateInput {
+  background-color: #F5F5F5;
+  width: 15em;
+  height: 5em;
+  font-size: 1em;
+  margin: 2em 0;
+  border: 2px solid #5E5E5F; }
+
+#translateButt {
+  text-align: center;
+  line-height: 2em;
+  background-color: #F5F5F5;
+  width: 15em;
+  height: 2em;
+  font-size: 1em;
+  border: 2px solid #5E5E5F;
+  border-radius: 2em; }
+
+#translateButt:hover {
+  background-color: #2292A4; }
+
+#clearButt {
+  display: inline-block;
+  text-align: center;
+  line-height: 2em;
+  background-color: #F5F5F5;
+  width: 15em;
+  height: 2em;
+  font-size: 1em;
+  border: 2px solid #5E5E5F;
+  border-radius: 2em;
+  margin: 2em 0; }
+
+#clearButt:hover {
+  background-color: #d96c06; }
+
+#translationText {
+  padding: 1em;
+  width: 13em;
+  height: 5em;
+  font-size: 1em;
+  border: 2px solid #5E5E5F;
+  margin: 2em 0; }
+
+#pigCode img {
+  width: 15em;
+  height: auto; }
+
+/*# sourceMappingURL=main.css.map */
