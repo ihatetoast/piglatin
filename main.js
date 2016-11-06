@@ -1,3 +1,6 @@
+//new issue: dealing with y. example: wyatt is turned into attwyay 
+// also when ends in y like okayyay
+
 $(document ).ready(function() { 
   $('#clearButt').hide();
   $('#corn_bite').hide();
@@ -79,6 +82,9 @@ $(document ).ready(function() {
   })
   $("#clearButt").click(function(){
     $("#translateInput").val('');
-    $("#translationText").html('');
+    $("#pigCode").attr("src", "./images/pig_mouth_shut.png");
+    // $("#translationText").html('');
+    $('#clearButt').hide();
+    $('#corn_bite').hide();
   })
 });
