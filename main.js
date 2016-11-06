@@ -1,9 +1,13 @@
-$(document ).ready(function() {
-    alert("piggies a go go")
-  
+$(document ).ready(function() { 
+  $('#clearButt').hide();
+  $('#corn_bite').hide();
+
+
   $("#translateButt").click(function() {
     var pigLat = [];
     var pig = $("#translateInput").val().toLowerCase();
+    var vowels = ["a", "e", "i", "o", "u"];
+
     //test for empty and null
     if ((pig == null) || (pig == "") ) {
       alert("Don't be absurd. Please enter a word");
@@ -11,25 +15,59 @@ $(document ).ready(function() {
     else if(pig.search(/^[A-Za-z\s]+$/)){
     alert("Oy! I said no punctuation marks or numerals!")
     }
+
     else if(isNaN(pig)){
       var pigArr = pig.split(' ');
       for(var ind = 0; ind<pigArr.length; ind++){
         var word = pigArr[ind];
-        // console.log("first letter of word is "+pigArr[ind].charAt(0));
+        //**********************//
+        // VOWELS -- EASY PEASY //
+        //**********************//
         if(pigArr[ind].charAt(0).match(/^[aeiou]$/i)) {
-          // console.log("this word starts with a vowel");
           pigWord=word.concat("yay");
           pigLat.push(pigWord);
-        } else{
-          // console.log("this word does not start with a vowel");
-          //identify first letter
-          firstLetter=word.charAt(0);
+          $("#pigCode").attr("src", "./images/pig_mouth_open.png");
+          $('#clearButt').show();
+          $('#corn_bite').show();
+        } 
+
+        else if ((vowels.indexOf(pigArr[ind][0])===-1)&&(vowels.indexOf(pigArr[ind][1])===-1)&&(vowels.indexOf(pigArr[ind][2])===-1)){
+          console.log(pigArr[ind][2]);
+          //***********************************//
+          //  CONSONANTS  -- 3 cluster  WORKS   //
+          //***********************************//
+          var pigWord=word.substr(3).concat(word.substr(0,3)+"ay");
+          pigLat.push(pigWord);
+
+          $("#pigCode").attr("src", "./images/pig_mouth_open.png");
+          $('#clearButt').show();
+          $('#corn_bite').show();
+        } 
+        //***********************************//
+        //       CONSONANTS  -- 2 cluster    //
+        //***********************************//
+
+        else if ((vowels.indexOf(pigArr[ind][0])===-1)&&(vowels.indexOf(pigArr[ind][1])===-1)){
           //remove the first letter
           //leaving remaining parts of the word
-          beheadedWord=word.substr(1);
-          pigWord=beheadedWord.concat(firstLetter).concat("ay");
+          var pigWord=word.substr(2).concat(word.substr(0,2)+"ay");
           pigLat.push(pigWord);
-        }
+
+          $("#pigCode").attr("src", "./images/pig_mouth_open.png");
+          $('#clearButt').show();
+          $('#corn_bite').show();
+        } else if (vowels.indexOf(pigArr[ind][0])===-1){
+          // var firstLetter=word.charAt(0);
+          //remove the first letter
+          //leaving remaining parts of the word
+          var pigWord=word.substr(1).concat(word.substr(0,1)+"ay");
+          pigLat.push(pigWord);
+
+          $("#pigCode").attr("src", "./images/pig_mouth_open.png");
+          $('#clearButt').show();
+          $('#corn_bite').show();
+        } 
+
         console.log(pigLat.join(' '));
         var pigLatTrans = pigLat.join(' ');
         $("#translationText").html('Translation: '+pigLatTrans);
