@@ -1,5 +1,5 @@
 #A refactored Pig Latin translator
-[Pig Latin Translator on Surge](https://ihatetoast.piglatin.surge.sh)
+[Pig Latin Translator on Surge](http://ihatetoast.piglatin.surge.sh)
 
 ##In the beginning ...
 It was just a test for me to practice jQuery and all that jJazz. During my first attempt, I completely forgot about clusters, but it was late and I was going to return later.
