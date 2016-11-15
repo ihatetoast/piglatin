@@ -6,7 +6,14 @@ body {
   background-color: #90CDA6; }
 
 input {
-  background-color: transparent; }
+  background: #90CDA6;
+  background-image: url(../images/corn_whole.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: cover; }
+
+section {
+  text-align: center; }
 
 h1 {
   text-align: center;
@@ -17,78 +24,45 @@ h1 {
 p {
   font-size: 1.2em; }
 
+button {
+  text-align: center;
+  height: 2em;
+  background: #FAD99A;
+  font-size: 1em;
+  border: 2px solid #974326;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  border-radius: 2em; }
+
+button:hover {
+  background-color: #F5B001;
+  cursor: pointer; }
+
+.intro {
+  margin: 1em auto; }
+
 .row {
-  margin: 0 5em; }
+  text-align: center; }
 
 #translateInput {
-  box-sizing: border-box;
   width: 26em;
-  height: 9em;
+  height: 8.4em;
   font-size: 1em;
-  margin-left: 1em;
   border: none;
-  border-radius: 25%;
-  padding: 1em;
+  border-radius: 50% 50% 50% 50%/ 60% 40% 40% 60%;
   text-align: center; }
 
 .corn_whole {
-  background-image: url(../images/corn_whole.png);
   background-repeat: no-repeat;
-  height: 9.6em;
-  margin: 0.5em 2em;
-  padding-right: 3em; }
-
-#translateButt {
-  text-align: center;
-  height: 2em;
-  background: #fff;
-  font-size: 1em;
-  margin-left: 12em;
-  border: 2px solid #fff;
-  -moz-border-radius: 2em;
-  -webkit-border-radius: 2em;
-  border-radius: 2em; }
-
-#translateButt:hover {
-  background-color: #2292A4; }
-
-#clearButt {
-  text-align: center;
-  width: 120px;
-  height: 2em;
-  background: #fff;
-  font-size: 1em;
-  margin-left: 12em;
-  border: 2px solid #fff;
-  -moz-border-radius: 2em;
-  -webkit-border-radius: 2em;
-  border-radius: 2em; }
-
-#clearButt:hover {
-  color: #974326;
-  font-weight: bold; }
-
-.clearButt {
-  display: inline-block; }
+  margin: 0.5em 2em; }
 
 #corn_bite {
-  background-image: url(../images/corn_bite.png);
-  background-repeat: no-repeat;
-  margin: 0 3.5em;
-  padding-right: 3em; }
+  display: inline-block; }
 
 #translationText {
-  box-sizing: border-box;
-  text-align: center;
-  width: 26em;
-  height: 9em;
-  font-size: 1em;
-  margin-left: 1em;
-  border: none;
-  border-radius: 25%;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 2.5em; }
+  font-size: 2em;
+  text-align: left;
+  width: 13em; }
 
 .pigCode {
   margin: 0 11em; }

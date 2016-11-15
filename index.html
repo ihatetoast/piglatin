@@ -7,39 +7,41 @@
 </head>
 <body>
 	
-	<section class="container">
-		<div class="row">
+	<main class="container">
+		<div class="intro">
 			<h1>Pig Latin translator</h1>
 			<p>It's well known that Pig Latin is the language of business; however, few people can write coherent Pig Latin. Necessity is the mother of invention, and insomnia and smartarsery are its wayward cousins.</p>
 			<p>Enter a brief sentence on the corn, omitting punctuation and numerals. (Write "dont" for "don't" and "two" for 2). </p>
 		</div>
-		<!-- ************************* -->
-		<!-- TRANSLATE CORN AND BUTTON -->
-		<!-- ************************* -->
-		<div class="row">
-			<div class="corn_whole">
-				<input type="text" id="translateInput">
+		<section>
+			<!-- ************************* -->
+			<!-- TRANSLATE CORN AND BUTTON -->
+			<!-- ************************* -->
+			<div class="row">
+				<div class="corn_whole">
+					<input type="text" id="translateInput">
+				</div>
+				<button id="translateButt">Eedfay emay</button>
 			</div>
-			<button id="translateButt">Eedfay emay</button>
-		</div>
-		<!-- ************************* -->
-		<!--       PIG FACES           -->
-		<!-- ************************* -->
-		<div class="row pigCode">
-			<img id="pigCode" src="./images/pig_mouth_shut.png" />
-		</div>
-		<!-- ************************* -->
-		<!--  RESULT AND AGAIN BUTTON  -->
-		<!-- ************************* -->
-		<div class="row">
-			<div id="corn_bite">
-				<div id="translationText"></div>
+			<!-- ************************* -->
+			<!--       PIG FACES           -->
+			<!-- ************************* -->
+			<div class="row pigCode">
+				<img id="pigCode" src="./images/pig_mouth_shut.png" />
 			</div>
-			<div class="clearButt">
-				<button id="clearButt">Againyay</button>
-			</div>
-		<div>
-	</section>
+			<!-- ************************* -->
+			<!--  RESULT AND AGAIN BUTTON  -->
+			<!-- ************************* -->
+			<div class="row">
+				<div id="corn_bite">
+					<div id="translationText"></div>
+				</div>
+				<div>
+					<button id="clearButt">Againyay</button>
+				</div>
+			<div>
+		</section>
+	</main>
 	<script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="./main.js"></script>
 </body>
