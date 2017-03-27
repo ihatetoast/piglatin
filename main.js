@@ -1,15 +1,15 @@
 //new issue: dealing with y. example: wyatt is turned into attwyay 
 // also when ends in y like okayyay
 
-$(document ).ready(function() { 
+
   $('#clearButt').hide();
   $('#corn_bite').hide();
 
 
-  $("#translateButt").click(function() {
-    var pigLat = [];
-    var pig = $("#translateInput").val().toLowerCase();
-    var vowels = ["a", "e", "i", "o", "u"];
+  $("#translateButt").click(() => {
+    let pigLat = [];
+    let pig = $("#translateInput").val().toLowerCase();
+    let vowels = ["a", "e", "i", "o", "u"];
 
     //test for empty and null
     if ((pig == null) || (pig == "") ) {
@@ -20,9 +20,9 @@ $(document ).ready(function() {
     }
 
     else if(isNaN(pig)){
-      var pigArr = pig.split(' ');
-      for(var ind = 0; ind<pigArr.length; ind++){
-        var word = pigArr[ind];
+      let pigArr = pig.split(' ');
+      for(let ind = 0; ind<pigArr.length; ind++){
+        let word = pigArr[ind];
         //**********************//
         // VOWELS -- EASY PEASY //
         //**********************//
@@ -40,7 +40,7 @@ $(document ).ready(function() {
           //***********************************//
           //  CONSONANTS  -- 3 cluster  WORKS   //
           //***********************************//
-          var pigWord=word.substr(3).concat(word.substr(0,3)+"ay");
+          let pigWord=word.substr(3).concat(word.substr(0,3)+"ay");
           pigLat.push(pigWord);
           $("input").css("background-image", "url(./images/corn_bite.png)");
           $("#pigCode").attr("src", "./images/pig_mouth_open.png");
@@ -54,17 +54,17 @@ $(document ).ready(function() {
         else if ((vowels.indexOf(pigArr[ind][0])===-1)&&(vowels.indexOf(pigArr[ind][1])===-1)){
           //remove the first letter
           //leaving remaining parts of the word
-          var pigWord=word.substr(2).concat(word.substr(0,2)+"ay");
+          let pigWord=word.substr(2).concat(word.substr(0,2)+"ay");
           pigLat.push(pigWord);
           $("input").css("background-image", "url(./images/corn_bite.png)");
           $("#pigCode").attr("src", "./images/pig_mouth_open.png");
           $('#clearButt').show();
           $('#corn_bite').show();
         } else if (vowels.indexOf(pigArr[ind][0])===-1){
-          // var firstLetter=word.charAt(0);
+          // let firstLetter=word.charAt(0);
           //remove the first letter
           //leaving remaining parts of the word
-          var pigWord=word.substr(1).concat(word.substr(0,1)+"ay");
+          let pigWord=word.substr(1).concat(word.substr(0,1)+"ay");
           pigLat.push(pigWord);
           $("input").css("background-image", "url(./images/corn_bite.png)");
           $("#pigCode").attr("src", "./images/pig_mouth_open.png");
@@ -73,7 +73,7 @@ $(document ).ready(function() {
         } 
 
         console.log(pigLat.join(' '));
-        var pigLatTrans = pigLat.join(' ');
+        let pigLatTrans = pigLat.join(' ');
         $("#translationText").html('Translation: '+pigLatTrans);
       }
     }
@@ -81,11 +81,11 @@ $(document ).ready(function() {
       alert("What have you done?")
     }
   })
-  $("#clearButt").click(function(){
+  $("#clearButt").click(() => {
     $("#translateInput").val('');
     $("#pigCode").attr("src", "./images/pig_mouth_shut.png");
     $("input").css("background-image", "url(./images/corn_whole.png)");
     $('#clearButt').hide();
     $('#corn_bite').hide();
   })
-});
+;
