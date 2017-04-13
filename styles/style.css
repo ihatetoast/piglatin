@@ -1,65 +1,68 @@
 @import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Quicksand");
 * {
+  box-sizing: border-box;
   font-family: 'Quicksand', sans-serif; }
 
 body {
-  background-color: #90CDA6; }
+  background-color: #90CDA6;
+  padding: 2em; }
 
 input {
   background: #90CDA6;
   background-image: url(../images/corn_whole.png);
   background-repeat: no-repeat;
-  cursor: pointer;
-  background-size: cover; }
+  background-size: cover;
+  cursor: pointer; }
 
 section {
   text-align: center; }
 
 h1 {
-  text-align: center;
-  font-size: 4em;
   font-family: 'Gloria Hallelujah', cursive;
-  margin: 0 auto; }
+  font-size: 4em;
+  margin: 0 auto;
+  text-align: center; }
 
 p {
   font-size: 1.2em; }
 
 button {
-  text-align: center;
-  height: 2em;
   background: #FAD99A;
-  font-size: 1em;
   border: 2px solid #974326;
   -moz-border-radius: 2em;
   -webkit-border-radius: 2em;
-  border-radius: 2em; }
+  border-radius: 2em;
+  font-size: 1em;
+  height: 2em;
+  text-align: center; }
 
 button:hover {
   background-color: #F5B001;
   cursor: pointer; }
 
 .intro {
-  margin: 1em auto; }
+  margin: 1em auto;
+  padding: 0 4em; }
 
 .row {
   text-align: center; }
 
-#translateInput {
-  width: 26em;
-  height: 8.4em;
-  font-size: 1em;
+.translateInput {
   border: none;
   border-radius: 50% 50% 50% 50%/ 60% 40% 40% 60%;
-  text-align: center; }
+  font-size: 1em;
+  height: 8.4em;
+  text-align: center;
+  width: 26em; }
 
 .corn_whole {
   background-repeat: no-repeat;
   margin: 0.5em 2em; }
 
-#corn_bite {
+.corn_bite {
   display: inline-block; }
 
-#translationText {
+.translationText {
   font-size: 2em;
   text-align: left;
   width: 13em; }
@@ -67,7 +70,9 @@ button:hover {
 .pigCode {
   margin: 0 11em; }
 
-#pigCode {
+.pigCodeImg {
   width: 20em; }
 
 /*# sourceMappingURL=main.css.map */
+
+/*# sourceMappingURL=style.css.map */
