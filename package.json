@@ -1,11 +1,8 @@
 {
-  "name": "piglatin",
+  "name": "Pig Latin Translator",
   "version": "1.0.0",
-  "description": "Pig Latin Translator",
+  "description": "a pig latin translator algorithm with sketch app illustrations",
   "main": "main.js",
-  "scripts": {
-    "test": "mocha main.test.js -w"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ihatetoast/piglatin.git"
