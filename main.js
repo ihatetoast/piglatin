@@ -29,7 +29,7 @@
         if(pigArr[ind].charAt(0).match(/^[aeiou]$/i)) {
           pigWord=word.concat("yay");
           pigLat.push(pigWord);
-          $("input").css("background-image", "url(./images/corn_bite.png)");
+        
           $("#pigCode").attr("src", "./images/pig_mouth_open.png");
           $('#clearButt').show();
           $('#corn_bite').show();
@@ -42,7 +42,6 @@
           //***********************************//
           let pigWord=word.substr(3).concat(word.substr(0,3)+"ay");
           pigLat.push(pigWord);
-          $("input").css("background-image", "url(./images/corn_bite.png)");
           $("#pigCode").attr("src", "./images/pig_mouth_open.png");
           $('#clearButt').show();
           $('#corn_bite').show();
@@ -56,7 +55,6 @@
           //leaving remaining parts of the word
           let pigWord=word.substr(2).concat(word.substr(0,2)+"ay");
           pigLat.push(pigWord);
-          $("input").css("background-image", "url(./images/corn_bite.png)");
           $("#pigCode").attr("src", "./images/pig_mouth_open.png");
           $('#clearButt').show();
           $('#corn_bite').show();
@@ -66,7 +64,7 @@
           //leaving remaining parts of the word
           let pigWord=word.substr(1).concat(word.substr(0,1)+"ay");
           pigLat.push(pigWord);
-          $("input").css("background-image", "url(./images/corn_bite.png)");
+          
           $("#pigCode").attr("src", "./images/pig_mouth_open.png");
           $('#clearButt').show();
           $('#corn_bite').show();
@@ -84,7 +82,6 @@
   $("#clearButt").click(() => {
     $("#translateInput").val('');
     $("#pigCode").attr("src", "./images/pig_mouth_shut.png");
-    $("input").css("background-image", "url(./images/corn_whole.png)");
     $('#clearButt').hide();
     $('#corn_bite').hide();
   })

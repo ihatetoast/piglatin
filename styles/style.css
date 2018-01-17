@@ -1,30 +1,35 @@
-@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Quicksand");
 * {
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif; }
 
-body {
-  background-color: #90CDA6;
-  padding: 2em; }
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
 
-input {
-  background: #90CDA6;
-  background-image: url(../images/corn_whole.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer; }
+.site-content {
+  background-color: #90cda6;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start; }
 
-section {
-  text-align: center; }
+header, footer {
+  background-color: #f9d88b;
+  display: flex;
+  justify-content: center; }
 
 h1 {
   font-family: 'Gloria Hallelujah', cursive;
-  font-size: 4em;
-  margin: 0 auto;
-  text-align: center; }
+  font-size: 1em; }
+
+input {
+  background: #90CDA6;
+  cursor: pointer; }
 
 p {
-  font-size: 1.2em; }
+  font-size: 1em; }
 
 button {
   background: #FAD99A;
@@ -40,38 +45,16 @@ button:hover {
   background-color: #F5B001;
   cursor: pointer; }
 
-.intro {
-  margin: 1em auto;
-  padding: 0 4em; }
-
-.row {
-  text-align: center; }
-
-.translateInput {
-  border: none;
-  border-radius: 50% 50% 50% 50%/ 60% 40% 40% 60%;
-  font-size: 1em;
-  height: 8.4em;
-  text-align: center;
-  width: 26em; }
-
-.corn_whole {
-  background-repeat: no-repeat;
-  margin: 0.5em 2em; }
-
-.corn_bite {
-  display: inline-block; }
-
 .translationText {
   font-size: 2em;
   text-align: left;
   width: 13em; }
 
-.pigCode {
-  margin: 0 11em; }
-
 .pigCodeImg {
-  width: 20em; }
+  width: 80%; }
+
+.cornCob {
+  width: 80%; }
 
 /*# sourceMappingURL=main.css.map */
 

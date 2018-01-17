@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
-  <title>Pig Latin</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<body>
-	
-	<main class="container">
+  <head>
+    <meta charset="UTF-8">	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Pig Latin</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body class="site">
+	<header>
+    <h1>Pig Latin translator</h1>
+  </header>
+	<main class="site-content">
 		<div class="intro">
-			<h1>Pig Latin translator</h1>
 			<p>It's well known that Pig Latin is the language of business; however, few people can write coherent Pig Latin. Necessity is the mother of invention, and insomnia and smartarsery are its wayward cousins.</p>
 			<p>Enter a brief sentence on the corn, omitting punctuation and numerals. (Write "dont" for "don't" and "two" for 2). </p>
 		</div>
 		<section>
+      <!-- ************************* -->
+			<!--     PIG FACES & INPUT     -->
+			<!-- ************************* -->
+			<div class="inputDiv">
+        <input type="text" id="translateInput" class="translateInput">
+        <button id="translateButt">Eedfay emay</button>
+      </div>
+          
+      <div class="pigCode">
+        <img id="pigCode" class="pigCodeImg" src="./images/pig_mouth_shut.png" alt="pig face with mouth shut"/>
+      </div>
+
+        
 			<!-- ************************* -->
 			<!-- TRANSLATE CORN AND BUTTON -->
 			<!-- ************************* -->
-			<div class="row">
-				<div class="corn_whole">
-					<input type="text" id="translateInput" class="translateInput">
-				</div>
-				<button id="translateButt">Eedfay emay</button>
+			<div class="cornRow">
+        
+				<div class="cobs">
+          <img class="cornCob" id="cornCob" src="./images/corn_whole.png" alt="whole ear of corn">
+          <!-- <img src="./images/corn_bite.png" alt="ear of corn with bite out"> -->
+        </div>
+        
 			</div>
-			<!-- ************************* -->
-			<!--       PIG FACES           -->
-			<!-- ************************* -->
-			<div class="row pigCode">
-				<img id="pigCode" class="pigCodeImg" src="./images/pig_mouth_shut.png" alt="pig face with mouth shut"/>
-			</div>
+
 			<!-- ************************* -->
 			<!--  RESULT AND AGAIN BUTTON  -->
 			<!-- ************************* -->
@@ -44,6 +58,9 @@
 		</section>
 	</main>
 	<script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="./main.js"></script>
-</body>
+  <script type="text/javascript" src="./main.js"></script>
+  <footer>
+    <p>Atykay Assidycay | HateToastIyay</p>
+  </footer>
+  </body>
 </html> 
